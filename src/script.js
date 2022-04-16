@@ -2,13 +2,15 @@
 // from unix timestam to normal Date
 function converte(){
 
+    // check if both input fields are filled in
 if(document.getElementById("unixTimestamp").value && document.getElementById("normalDate").value ){
     
+    // when the invalid message is displayed, it will be removed
     if(document.getElementById('invalid')){
         document.getElementById('invalid').remove()
     }
 
-
+    // the massage that only one input field may be filled in is displayed in the HTML file
     const container = document.getElementById('container')
 
     const message = document.createElement('div')
@@ -17,8 +19,11 @@ if(document.getElementById("unixTimestamp").value && document.getElementById("no
     container.append(message)
     message.innerText = 'Please fill in only one of the input fields'
 
+    // convert unix timestamp to date
   } else if (document.getElementById("unixTimestamp").value){
 
+
+    // if an error message is shown, it will be removed
     if(document.getElementById('invalid')){
         document.getElementById('invalid').remove()
     }
@@ -73,7 +78,7 @@ if(document.getElementById("unixTimestamp").value && document.getElementById("no
 
     const normalDate = year + '-' + month + '-' + day + 'T' + hours + ':' + minutes + ':' + seconds
     
-
+    // check if the unix-timestamp is valid
     if (!year || !month || !day || !hours || !minutes || !seconds ){
         const body = document.body
 
@@ -86,9 +91,10 @@ if(document.getElementById("unixTimestamp").value && document.getElementById("no
         document.getElementById('normalDate').value = normalDate
     }
 
-
+    // convert date to unix timestamp
     } else if(document.getElementById("normalDate").value){
 
+        // if an error message is shown, it will be removed
         if(document.getElementById('invalid')){
             document.getElementById('invalid').remove()
         }
@@ -106,6 +112,7 @@ if(document.getElementById("unixTimestamp").value && document.getElementById("no
 
 }
 
+// reset all inputfields and remove all error messages
 function reset(){
     document.getElementById('unixTimestamp').value = ''
     document.getElementById('normalDate').value = ''
