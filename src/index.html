@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "text/javascript" src="script.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+    <div class="container" id="container">
+        <h1>Timestamp and Date converter</h1>
+        <div class="timestamp">
+            <h4>Unix-Timestamp</h4>
+            <input id="unixTimestamp" type="number">
+        </div>
+
+        <i class='bx bx-repost bx-lg'></i>
+
+        <div class="date">
+            <h4>Date</h4>
+            <input id="normalDate" type="datetime-local" step="1">
+        </div>
+
+        <div class="buttonBox">
+            <input class="button" type="button" onclick = "converte()" value = "Start">
+            <input class="button" type="button" onclick = "reset()" value = "Reset">
+        </div>
+    </div>
+</body>
+</html>

@@ -9,11 +9,12 @@ if(document.getElementById("unixTimestamp").value && document.getElementById("no
     }
 
 
-    const body = document.body
+    const container = document.getElementById('container')
 
     const message = document.createElement('div')
     message.setAttribute("id", "message")
-    body.append(message)
+    message.setAttribute("class", "message")
+    container.append(message)
     message.innerText = 'Please fill in only one of the input fields'
 
   } else if (document.getElementById("unixTimestamp").value){
@@ -78,7 +79,8 @@ if(document.getElementById("unixTimestamp").value && document.getElementById("no
 
         const invalid = document.createElement('div')
         invalid.setAttribute("id", "invalid")
-        body.append(invalid)
+        invalid.setAttribute("class", "invalid")
+        container.append(invalid)
         invalid.innerText = 'Invalid input'
     } else {
         document.getElementById('normalDate').value = normalDate
